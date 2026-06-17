@@ -1,0 +1,22 @@
+# `whisker_drawapp` — a Whisker app. See README.md for usage.
+#
+# Single-crate workspace: the same `Cargo.toml` carries `[package]`
+# for cargo's package resolution and `[workspace]` so `whisker run`
+# can find a workspace root. Add sibling crates by listing them in
+# `workspace.members`.
+
+[workspace]
+members = ["."]
+resolver = "2"
+
+[package]
+name = "whisker_drawapp"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["rlib"]
+
+[dependencies]
+whisker = "0.4"
+whisker-svg = "0.4"
